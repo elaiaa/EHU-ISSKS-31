@@ -132,6 +132,9 @@ docker compose up --build
 Ondoren ireki:
 
 - http://localhost:5001/ -> bertsio ez-segura (testu laua)
+  
+  <img width="876" height="574" alt="image" src="https://github.com/user-attachments/assets/9ebbd70c-9b2b-4bf3-9a68-f63c23bc0f33" />
+
 - http://localhost:5002/ -> hasharekin bertsioa
 - http://localhost:5003/ -> gatza duen bertsioa
 
