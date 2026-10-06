@@ -76,6 +76,23 @@ sha256sum linus_steg.jpg
 Bat datoz?
 
 Buenaventura Durrutiren mezu garrantzitsu bat dago zuentzat `durruti` karpetako irudietako batean. Mezua `steghide` programaren bidez sartu da, "durruti" pasahitzarekin. Irudia, mezuarekin bat datorren Hash (SHA256): `7d573924d70a604cb56122aed9bded3f40d3083d8adc353a97c0b816c0e573bb`. Zein fitxategi da? Zer dio esaldiak? Nola automatizatuko zenuke bilaketa fitxategi asko izango bazenitu karpetetan eta azpikarpetetan?
+Automatizatuta:
+#!/bin/bash
+HASH_OBJETIVO="7d573924d70a604cb56122aed9bded3f40d3083d8adc353a97c0b816c0e573bb"
+PASAHITZA="durruti"
+find . -type f | while read -r archivo; do
+    # Calcular hash de cada archivo
+    HASH_ACTUAL=$(sha256sum "$archivo" | awk '{print $1}')
+    
+    if [ "$HASH_ACTUAL" == "$HASH_OBJETIVO" ]; then
+        echo "[+] ¡Imagen encontrada!: $archivo"
+        echo "[+] Extrayendo mensaje oculto..."
+        steghide extract -sf "$archivo" -p "$PASAHITZA" -f
+        echo "[+] Contenido del mensaje:"
+        cat msg_durruti.txt 2>/dev/null || cat *.txt
+        break
+    fi
+done
 
 ## Pasahitzak eta gatza
 
