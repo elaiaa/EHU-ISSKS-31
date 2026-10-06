@@ -141,6 +141,9 @@ Ondoren ireki:
 
 - http://localhost:5003/ -> gatza duen bertsioa
 
+  <img width="1508" height="715" alt="image" src="https://github.com/user-attachments/assets/046dde74-9cfd-4fb5-8440-f91adc862807" />
+
+
 Erregistratu erabiltzaile eta pasahitz berdina hiru bertsioetan eta alderatu datu-basea edo zerbitzuko informazioa. Begiratu:
 
 - Testu lauan pasahitza jatorrizkoa ikus daiteke;
