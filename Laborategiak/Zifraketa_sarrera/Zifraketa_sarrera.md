@@ -136,6 +136,9 @@ Ondoren ireki:
   <img width="876" height="574" alt="image" src="https://github.com/user-attachments/assets/9ebbd70c-9b2b-4bf3-9a68-f63c23bc0f33" />
 
 - http://localhost:5002/ -> hasharekin bertsioa
+
+  <img width="861" height="640" alt="image" src="https://github.com/user-attachments/assets/f26e02b6-be2d-4ab8-b07f-de9ef9643ae9" />
+
 - http://localhost:5003/ -> gatza duen bertsioa
 
 Erregistratu erabiltzaile eta pasahitz berdina hiru bertsioetan eta alderatu datu-basea edo zerbitzuko informazioa. Begiratu:
