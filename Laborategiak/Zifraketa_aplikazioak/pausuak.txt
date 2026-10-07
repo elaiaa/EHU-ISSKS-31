@@ -1,0 +1,23 @@
+En este laboratorio de **Aplicaciones de Cifrado** (*Zifraketa aplikazioak*) habéis implementado la seguridad web en un servidor desde cero. En resumen, lo que habéis conseguido es:
+
+1. **Crear una página web básica:** Habéis alojado una web sencilla con la etiqueta `<h1>SSL konexioa</h1>` en el directorio de Apache `/var/www/gune_segurua`.
+
+
+2. **Generar un certificado SSL/TLS autofirmado:** Usando la herramienta `openssl`, habéis creado una clave privada y un certificado de seguridad X.509 para cifrar la información que viaje entre el usuario y el servidor.
+
+
+3. **Configurar un servidor seguro (HTTPS):**
+* Habilitasteis los módulos `ssl` y `rewrite` en Apache.
+* Creasteis un `VirtualHost` para gestionar el **puerto 443 (HTTPS)** utilizando vuestro certificado.
+
+
+* Configurasteis el **puerto 80 (HTTP)** para que cualquier intento de entrada insegura se **redirija automáticamente** a la versión segura HTTPS (`https://localhost/`).
+
+
+
+
+4. **Validar la seguridad e importar el certificado:**
+* Comprobasteis la redirección desde el navegador y entendisteis por qué aparece la advertencia de "Conexión no privada" (al ser un certificado autofirmado y no emitido por una entidad comercial).
+
+
+* Aprendisteis a exportar el certificado `.crt` e importarlo en las autoridades de confianza del navegador para eliminar el aviso de alerta y dejar el candado en verde/seguro.
