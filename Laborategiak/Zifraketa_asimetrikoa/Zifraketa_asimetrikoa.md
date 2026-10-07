@@ -130,6 +130,14 @@ hqLrPTy2euh/O45VyZSigvW+QgM=
 =aYb8
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+
+Commit-a GitHuben egiaztatuta gisa agertzen da (“Verified”). Zer esan nahi du horrek?
+Commit bat GitHub-en "Verified" (Egiaztatua) gisa agertzeak esan nahi du GitHub-ek kriptografikoki egiaztatu duela commit horren egileak bere gako pribatu PGP/GPGa erabili zuela aldaketak sinatzeko, eta gako publiko bera bere GitHub kontuarekin lotuta dagoela.
+
+![GitHub Commit](github_commit.png)
+
+> Egiaztatu commit hori bera zure ordenagailu lokalean. Zein urrats egin behar dituzu?
+
 Pausuak:
 ```bash
 #Mikelen gpg publikoa inportatu
@@ -143,12 +151,6 @@ git checkout develop
 #Egiaztatu
 git verify-commit 6176ac9c479797c698b153c7750fa3e4421f445d
 ```
-Commit-a GitHuben egiaztatuta gisa agertzen da (“Verified”). Zer esan nahi du horrek?
-Commit bat GitHub-en "Verified" (Egiaztatua) gisa agertzeak esan nahi du GitHub-ek kriptografikoki egiaztatu duela commit horren egileak bere gako pribatu PGP/GPGa erabili zuela aldaketak sinatzeko, eta gako publiko bera bere GitHub kontuarekin lotuta dagoela.
-
-![GitHub Commit](github_commit.png)
-
-> Egiaztatu commit hori bera zure ordenagailu lokalean. Zein urrats egin behar dituzu?
 
 > Erabili zure GPG gakoak commit bat sinatzeko zure GitHub biltegi publikoetako batean, GitHuben ikustean “Verified” gisa ager dadin. Egiaztatu beste ikasleek sinatutako commit-ak.
 
