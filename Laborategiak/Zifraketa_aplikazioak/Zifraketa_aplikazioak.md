@@ -33,5 +33,8 @@ Sortu autosinatutako ziurtagiri bat OpenSSL erabiliz eta sortu Apacheren konfigu
 
 Webgunea HTTPS bidez bisitatzean, ziurtagiria izan arren, errore-mezu bat agertuko da oraindik. Esportatu ziurtagiria eta gehitu zure nabigatzailera abisu hori ez agertzeko.
 
+HTTP (segurua ez):
+<img width="821" height="525" alt="image" src="https://github.com/user-attachments/assets/846dd860-7ac5-4e0e-9a11-c2f73540ba9f" />
+
 
 
