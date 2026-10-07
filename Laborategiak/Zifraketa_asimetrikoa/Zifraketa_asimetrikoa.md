@@ -130,7 +130,19 @@ hqLrPTy2euh/O45VyZSigvW+QgM=
 =aYb8
 -----END PGP PUBLIC KEY BLOCK-----
 ```
+Pausuak:
+```bash
+#Mikelen gpg publikoa inportatu
+curl -s "https://github.com/mikel-egana-aranguren.gpg" | gpg --import
 
+#Clone
+git clone https://github.com/mikel-egana-aranguren/EHU-SGSSI-01.git
+cd EHU-SGSSI-01
+git checkout develop
+
+#Egiaztatu
+git verify-commit 6176ac9c479797c698b153c7750fa3e4421f445d
+```
 Commit-a GitHuben egiaztatuta gisa agertzen da (“Verified”). Zer esan nahi du horrek?
 
 ![GitHub Commit](github_commit.png)
