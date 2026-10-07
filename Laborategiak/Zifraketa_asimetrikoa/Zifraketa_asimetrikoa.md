@@ -35,6 +35,9 @@ gpg --list-keys
 
 > Zer esan nahi du `[ultimate]` etiketak?
 
+Nire sistemak konfiantza absolutua daukala gako horrekiko nik sortu dudalako lokalki eta dagokion gako pribatua daukadalako.
+
+
 Garrantzitsua da gako publikoa eskuragarri egotea. [Web-orri pertsonal](https://mikel-egana-aranguren.github.io/contact/) batean argitara daiteke, email batean erantsita bidal daiteke edo zerbitzari espezifikoetan argitara daiteke, hala nola **keys.openpgp.org** zerbitzarian (ikus aurrerago).
 
 Komando-lerroan GPG erabiliz zifratu diren fitxategiak bidaltzeko, nahikoa da emailari erantsi eta bidaltzea.
@@ -43,6 +46,10 @@ Komando-lerroan GPG erabiliz zifratu diren fitxategiak bidaltzeko, nahikoa da em
 
 > Arrazoitu zer egin behar izan duzuen horietako bakoitza lortzeko.
 
+Konfidentzialtasuna: jasotzailearen gako publikoarekin zifratuz lortzen da, soilik berak deszifratu ahalko duelako bere gako pribatuarekin.
+Autenticación eta No Repudio: igorlearen gako pribatuarekin zinatuz lortzen da, jasotzaileak igorlearen gako publikoa erabiltzen du konprobatzeko bera izan dela bidali duena.
+Integritatea: firma digitalak hash kriptografiko bat du edukiarena, mezua aldatzen bada (nahiz eta bit bakarra izan), firmak ez du balioko.
+ 
 ## GPG gakoen gaineko konfiantza
 
 Ikusi ahal izan duzuenez, oso erraza da gako-pare bat sortzea eta edozein izen jartzea. Ez da inolako egiaztapenik egiten. Beraz, pertsona batek sinatutako eta/edo zifratutako fitxategi bat jasotzen badugu, ezin dugu ziur egon pertsona hori benetan bera denik, baldin eta pertsona horri gako hori benetan berea den galdetzeko modurik ez badugu. Hala ere, badaude pertsona baten gakoetan konfiantza izateko mekanismoak, nahiz eta pertsona hori ez ezagutu edo harekin aldez aurretik hitz egin ez, gakoa benetan berea den egiaztatzeko.
@@ -50,6 +57,23 @@ Ikusi ahal izan duzuenez, oso erraza da gako-pare bat sortzea eta edozein izen j
 - Talde bakoitzean ikasle bat “konfiantzazkotzat” izendatuko da; hau da, irakasleak konfiantza osoa izango du pertsona horrengan. Ikasle horrek bere gako publikoa irakasleari bidaliko dio. Taldeak lortu beharko du beste ikasleen gako publikoak irakasleari bidaltzean konfiantzazko gisa (`[full]`) agertzea **irakaslearen ordenagailuko gakoen giltzarrian**.
 
 > Arrazoitu zer egin behar izan duzuen hori lortzeko.
+
+1- Nire gako publikoa exportatuko dut berari pasatzeko
+```bash
+gpg --armor --export elaia.ort@gmail.com > elaia_publica.asc
+```
+2- Berak egin behar duena bere terminalean nire gakoa zinatzeko
+```bash
+# Importa tu clave
+gpg --import elaia_publica.asc
+
+# Firma tu clave con su clave privada
+gpg --sign-key elaia.ort@gmail.com
+
+# Exporta tu clave ya firmada por él/ella
+gpg --armor --export elaia.ort@gmail.com > elaia_sinatuta.asc
+```
+3- Beraz, egin beharrekoa: Web of Trust modeloa erabili da. Irakasleak konfiantzazko ikasle bat duenez, ikasle horrek beste ikasleen gakoak zinatu behar ditu konfiantza transmititzeko. Irakasleak gako horiek bere konfiantzazko ikasleaz zinatuta jasotzen dituenean, bere sistemak automatikoki balidatuko ditu.
 
 ## Gako publikoen giltzarriak GPGn
 
