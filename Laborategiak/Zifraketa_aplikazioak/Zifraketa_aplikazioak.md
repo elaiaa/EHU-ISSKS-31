@@ -36,5 +36,9 @@ Webgunea HTTPS bidez bisitatzean, ziurtagiria izan arren, errore-mezu bat agertu
 HTTP (segurua ez):
 <img width="821" height="525" alt="image" src="https://github.com/user-attachments/assets/846dd860-7ac5-4e0e-9a11-c2f73540ba9f" />
 
+Avanzado --> Continuar a localhost:
+<img width="373" height="195" alt="image" src="https://github.com/user-attachments/assets/bc43b9c3-aed3-4ec3-950f-b18640ecf929" />
+
+
 
 
