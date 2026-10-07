@@ -215,8 +215,11 @@ gpg --symmetric --cipher-algo AES256 --armor fitxategia.txt
 #GPGk pasahitz bat sartzeko eskatuko dizu eta fitxategia.txt.asc fitxategi cifratua sortuko du
 ```
 2- Hartzaileak deszifratu ahal izateko jarraitu beharreko urratsak
+
  2.1- Pasahitza partekatu: Zifratzeko erabilitako pasahitza hartzaileari helarazi behar diozu kanal seguru independente bat erabiliz
+ 
  2.2- Fitxategia bidali: Zifratutako fitxategia (fitxategia.txt.asc) posta elektronikoz edo nahi duzun bidetik bidali.
+ 
  2.3-Hartzaileak deszifratzea: Hartzaileak komando hau exekutatuko du bere terminalean:
  ```bash
 gpg --decrypt fitxategia.txt.asc > fitxategia.txt
