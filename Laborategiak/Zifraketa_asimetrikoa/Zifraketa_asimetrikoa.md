@@ -261,3 +261,18 @@ cat mezua_deszifratua.txt
 Zifratu mezu bat gako publikoarekin `openssl pkeyutl -encrypt` erabiliz. Deszifratu gako pribatuarekin eta egiaztatu mezuak bat datozela.
 
 > RSA fitxategi txikietarako erabiltzen da. Nola inplementatuko zenuke zifraketa hibrido bat, AES erabiliz fitxategia modu simetrikoan zifratzeko eta RSA AES gakoa bera zifratzeko?
+
+1- Sortu AES 256 biteko gako simetriko bat (32 byte):
+```bash
+openssl rand -out aes_gakoa.bin 32
+```
+2-Zifratu fitxategia AES bidez (edozein tamainakoa izan daiteke):
+
+```Bash
+openssl enc -aes-256-cbc -salt -in mezua.txt -out fitxategi_zifratua.enc -pass file:aes_gakoa.bin
+```
+3- Zifratu AES gakoa bera RSA gako publikoaren bidez:
+
+```Bash
+openssl pkeyutl -encrypt -pubin -inkey gako_publikoa.pem -in aes_gakoa.bin -out aes_gakoa_zifratua.enc
+```
