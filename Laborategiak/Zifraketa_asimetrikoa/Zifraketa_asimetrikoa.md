@@ -170,6 +170,8 @@ source ~/.bashrc
 Eginda!
 <img width="868" height="539" alt="image" src="https://github.com/user-attachments/assets/c67b2b14-7b4c-4724-bc32-2c9e15518535" />
 
+commit url: https://github.com/elaiaa/EHU-ISSKS-31/commit/eb7035dcf6db8242f5f1d1064a4a8f10a5e6a90f
+
 
 ## GPGren beste funtzionalitate batzuk
 
