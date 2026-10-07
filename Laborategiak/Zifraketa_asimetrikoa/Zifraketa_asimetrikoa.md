@@ -98,6 +98,13 @@ Aurreko ataleko gakoen giltzarria birsortuko dugu, baina klaseko ikasleen gakoek
 
 > Zertarako balio du bigarren fitxategi horrek? Nola erabiltzen da?
 
+Zertarako balio du? Bigarren fitxategi hori (.asc) jatorrizko fitxategiaren (.xpi) sinadura digitala da. Deskargatu dugun programa benetakoa dela (garatzaile ofizialek sortua) eta bidean inork ez duela aldatu edo kutsatu (osotasuna eta autentikotasuna) bermatzen du.   
+
+Nola erabiltzen da? Bi fitxategiak karpeta berean izanda, terminalean honako komando hau exekutatuz egiaztatzen da:
+```bash
+gpg --verify enigmail.xpi.asc enigmail.xpi
+```
+
 GitHuben commit-ak GPG bidez sinatzeko aukera dago, commit horien segurtasuna eta trazabilitatea handitzeko. Irakasleak `6176ac9c479797c698b153c7750fa3e4421f445d` hash-a duen commit-a sinatu du, gaztelerazko apunteen biltegiko `develop` adarrekoa, [EHU-SGSSI-01](https://github.com/mikel-egana-aranguren/EHU-SGSSI-01) irakasgaiarena, honako gako publikoarekin batera sortutako gako pribatua erabiliz (`mikel.egana.aranguren@gmail.com`):
 
 ```
