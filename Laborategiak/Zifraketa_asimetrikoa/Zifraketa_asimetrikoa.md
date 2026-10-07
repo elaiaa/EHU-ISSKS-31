@@ -49,6 +49,11 @@ Komando-lerroan GPG erabiliz zifratu diren fitxategiak bidaltzeko, nahikoa da em
 Konfidentzialtasuna: jasotzailearen gako publikoarekin zifratuz lortzen da, soilik berak deszifratu ahalko duelako bere gako pribatuarekin.
 Autenticación eta No Repudio: igorlearen gako pribatuarekin zinatuz lortzen da, jasotzaileak igorlearen gako publikoa erabiltzen du konprobatzeko bera izan dela bidali duena.
 Integritatea: firma digitalak hash kriptografiko bat du edukiarena, mezua aldatzen bada (nahiz eta bit bakarra izan), firmak ez du balioko.
+
+```bash
+# Cifrar y firmar simultáneamente
+gpg --encrypt --sign --recipient email_destinatario@ejemplo.com fitxategia.txt
+```
  
 ## GPG gakoen gaineko konfiantza
 
