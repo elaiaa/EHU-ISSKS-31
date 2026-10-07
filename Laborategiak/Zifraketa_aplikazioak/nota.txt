@@ -1,0 +1,2 @@
+la carpeta para la web está aquí:
+/var/www/gune_segurua
