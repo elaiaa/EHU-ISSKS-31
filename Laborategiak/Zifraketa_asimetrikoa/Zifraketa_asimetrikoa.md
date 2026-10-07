@@ -244,6 +244,8 @@ Gako publikoa ateratzeko:
 ```bash
 openssl rsa -pubout -in gako.pem -out gako_publikoa.pem
 ```
+Zifratu mezu bat gako publikoarekin `openssl pkeyutl -encrypt` erabiliz. Deszifratu gako pribatuarekin eta egiaztatu mezuak bat datozela.
+
 Zifratzeko
 
 ```bash
@@ -257,8 +259,6 @@ Egiaztatu:
 ```bash
 cat mezua_deszifratua.txt
 ```
-
-Zifratu mezu bat gako publikoarekin `openssl pkeyutl -encrypt` erabiliz. Deszifratu gako pribatuarekin eta egiaztatu mezuak bat datozela.
 
 > RSA fitxategi txikietarako erabiltzen da. Nola inplementatuko zenuke zifraketa hibrido bat, AES erabiliz fitxategia modu simetrikoan zifratzeko eta RSA AES gakoa bera zifratzeko?
 
