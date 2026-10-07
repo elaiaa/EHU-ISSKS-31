@@ -244,6 +244,19 @@ Gako publikoa ateratzeko:
 ```bash
 openssl rsa -pubout -in gako.pem -out gako_publikoa.pem
 ```
+Zifratzeko
+
+```bash
+openssl pkeyutl -encrypt -pubin -inkey gako_publikoa.pem -in mezua.txt -out mezua_zifratua.enc
+```
+Deszifratzeko:
+```bash
+openssl pkeyutl -decrypt -inkey gako.pem -in mezua_zifratua.enc -out mezua_deszifratua.txt
+```
+Egiaztatu:
+```bash
+cat mezua_deszifratua.txt
+```
 
 Zifratu mezu bat gako publikoarekin `openssl pkeyutl -encrypt` erabiliz. Deszifratu gako pribatuarekin eta egiaztatu mezuak bat datozela.
 
