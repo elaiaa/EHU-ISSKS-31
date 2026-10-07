@@ -154,6 +154,23 @@ git verify-commit 6176ac9c479797c698b153c7750fa3e4421f445d
 
 > Erabili zure GPG gakoak commit bat sinatzeko zure GitHub biltegi publikoetako batean, GitHuben ikustean “Verified” gisa ager dadin. Egiaztatu beste ikasleek sinatutako commit-ak.
 
+1- GPG gakoa nire githubean sartu dut (new gpg key)
+2- proba.txt aldatu dut commit-a egiteko
+3- Commit egiteko pausu hauek jarraitu ditut
+```bash
+git add .
+git commit -S -m "Commit sinatua probaldia"
+git push origin main
+```
+4- Hasieran errore bat eman dit ezin zuelako interfazerik erabili pasahitza sartzeko, beraz komando hauek sartuz konpontzen da:
+```bash
+echo 'export GPG_TTY=$(tty)' >> ~/.bashrc
+source ~/.bashrc
+```
+Eginda!
+<img width="868" height="539" alt="image" src="https://github.com/user-attachments/assets/c67b2b14-7b4c-4724-bc32-2c9e15518535" />
+
+
 ## GPGren beste funtzionalitate batzuk
 
 Garrantzitsua da zuen gakoak beste ekipo batzuetan erabiltzeko gai izatea, batez ere azterketari begira.
