@@ -177,13 +177,51 @@ Garrantzitsua da zuen gakoak beste ekipo batzuetan erabiltzeko gai izatea, batez
 
 > Nola esportatzen da GPG gako bat beste ekipo batean erabili ahal izateko?
 
+1- Biak exportatu behar dira
+```bash
+gpg --armor --export zure_emaila@adibidea.com > gako_publikoa.asc
+gpg --armor --export-secret-keys zure_emaila@adibidea.com > gako_pribatua.asc
+```
+2- Biak importatu behar dira beste ordenagailuan (usb bidez eraman, adibidez)
+```bash
+gpg --import gako_pribatua.asc
+gpg --import gako_publikoa.asc
+```
+
 Gerta daiteke gako bat konprometitzea.
 
 > Nola baliogabetuko zenuke zure gakoa?
 
+1- Baliogabetze ziurtagiri bat sortuz
+```bash
+gpg --output baliogabetzea.asc --gen-revoke zure_emaila@adibidea.com
+```
+2- Ziurtagiria inportatu
+```bash
+gpg --import baliogabetzea.asc
+```
+3- Gako zerbitzarira igorri besteek jakiteko (nahi bada)
+```bash
+gpg --keyserver hkps://keys.openpgp.org --send-keys ZURE_GAKOAREN_IDA
+```
+
 Nahiz eta haren funtzio nagusia zifraketa asimetrikoa izan, GPG zifratzeko ere erabil daiteke modu simetrikoan.
 
 > Nola zifratuko zenuke dokumentu hau modu simetrikoan, eta zein urrats jarraituko zenituzke hartzaileak deszifratu ahal izan dezan?
+
+1- Zifratu modu simetrikoan
+```bash
+gpg --symmetric --cipher-algo AES256 --armor fitxategia.txt
+#GPGk pasahitz bat sartzeko eskatuko dizu eta fitxategia.txt.asc fitxategi cifratua sortuko du
+```
+2- Hartzaileak deszifratu ahal izateko jarraitu beharreko urratsak
+ 2.1- Pasahitza partekatu: Zifratzeko erabilitako pasahitza hartzaileari helarazi behar diozu kanal seguru independente bat erabiliz
+ 2.2- Fitxategia bidali: Zifratutako fitxategia (fitxategia.txt.asc) posta elektronikoz edo nahi duzun bidetik bidali.
+ 2.3-Hartzaileak deszifratzea: Hartzaileak komando hau exekutatuko du bere terminalean:
+ ```bash
+gpg --decrypt fitxategia.txt.asc > fitxategia.txt
+#Sistemak pasahitza eskatuko dio, eta zuzen sartzean jatorrizko dokumentua berreskuratuko du
+```
 
 ## RSA
 
