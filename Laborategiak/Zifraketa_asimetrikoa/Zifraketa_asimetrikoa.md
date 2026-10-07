@@ -51,10 +51,13 @@ Autenticación eta No Repudio: igorlearen gako pribatuarekin zinatuz lortzen da,
 Integritatea: firma digitalak hash kriptografiko bat du edukiarena, mezua aldatzen bada (nahiz eta bit bakarra izan), firmak ez du balioko.
 
 ```bash
-# Cifrar y firmar simultáneamente
+# Cifrar y firmar simultáneamente EN BINARIO
 gpg --encrypt --sign --recipient email_destinatario@ejemplo.com fitxategia.txt
 ```
- 
+```bash
+#Cifrar, firmar y armor para que salga EN ASCII
+gpg --armor --encrypt --sign --recipient email_destinatario@ejemplo.com fitxategia.txt 
+```
 ## GPG gakoen gaineko konfiantza
 
 Ikusi ahal izan duzuenez, oso erraza da gako-pare bat sortzea eta edozein izen jartzea. Ez da inolako egiaztapenik egiten. Beraz, pertsona batek sinatutako eta/edo zifratutako fitxategi bat jasotzen badugu, ezin dugu ziur egon pertsona hori benetan bera denik, baldin eta pertsona horri gako hori benetan berea den galdetzeko modurik ez badugu. Hala ere, badaude pertsona baten gakoetan konfiantza izateko mekanismoak, nahiz eta pertsona hori ez ezagutu edo harekin aldez aurretik hitz egin ez, gakoa benetan berea den egiaztatzeko.
