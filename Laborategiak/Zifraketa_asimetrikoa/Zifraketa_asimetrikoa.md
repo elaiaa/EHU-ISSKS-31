@@ -100,6 +100,10 @@ Commit-a GitHuben egiaztatuta gisa agertzen da (“Verified”). Zer esan nahi d
 
 > Erabili zure GPG gakoak commit bat sinatzeko zure GitHub biltegi publikoetako batean, GitHuben ikustean “Verified” gisa ager dadin. Egiaztatu beste ikasleek sinatutako commit-ak.
 
+<img width="1845" height="733" alt="image" src="https://github.com/user-attachments/assets/642a4fa9-c5ca-4304-b6a8-0d130e53b990" />
+https://github.com/elaiaa/EHU-ISSKS-31/commit/29dc87d064ade2bac1d5ac9a8c4d2c003208be27
+
+
 ## GPGren beste funtzionalitate batzuk
 
 Garrantzitsua da zuen gakoak beste ekipo batzuetan erabiltzeko gai izatea, batez ere azterketari begira.
