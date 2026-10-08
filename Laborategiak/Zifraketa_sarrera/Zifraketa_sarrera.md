@@ -76,25 +76,6 @@ sha256sum linus_steg.jpg
 Bat datoz?
 
 Buenaventura Durrutiren mezu garrantzitsu bat dago zuentzat `durruti` karpetako irudietako batean. Mezua `steghide` programaren bidez sartu da, "durruti" pasahitzarekin. Irudia, mezuarekin bat datorren Hash (SHA256): `7d573924d70a604cb56122aed9bded3f40d3083d8adc353a97c0b816c0e573bb`. Zein fitxategi da? Zer dio esaldiak? Nola automatizatuko zenuke bilaketa fitxategi asko izango bazenitu karpetetan eta azpikarpetetan?
-Automatizatuta:
-```bash
-#!/bin/bash
-HASH_OBJETIVO="7d573924d70a604cb56122aed9bded3f40d3083d8adc353a97c0b816c0e573bb"
-PASAHITZA="durruti"
-find . -type f | while read -r archivo; do
-    # Calcular hash de cada archivo
-    HASH_ACTUAL=$(sha256sum "$archivo" | awk '{print $1}')
-    
-    if [ "$HASH_ACTUAL" == "$HASH_OBJETIVO" ]; then
-        echo "[+] ¡Imagen encontrada!: $archivo"
-        echo "[+] Extrayendo mensaje oculto..."
-        steghide extract -sf "$archivo" -p "$PASAHITZA" -f
-        echo "[+] Contenido del mensaje:"
-        cat msg_durruti.txt 2>/dev/null || cat *.txt
-        break
-    fi
-done
-```
 
 ## Pasahitzak eta gatza
 
@@ -132,17 +113,8 @@ docker compose up --build
 Ondoren ireki:
 
 - http://localhost:5001/ -> bertsio ez-segura (testu laua)
-  
-  <img width="876" height="574" alt="image" src="https://github.com/user-attachments/assets/9ebbd70c-9b2b-4bf3-9a68-f63c23bc0f33" />
-
 - http://localhost:5002/ -> hasharekin bertsioa
-
-  <img width="861" height="640" alt="image" src="https://github.com/user-attachments/assets/f26e02b6-be2d-4ab8-b07f-de9ef9643ae9" />
-
 - http://localhost:5003/ -> gatza duen bertsioa
-
-  <img width="1508" height="715" alt="image" src="https://github.com/user-attachments/assets/046dde74-9cfd-4fb5-8440-f91adc862807" />
-
 
 Erregistratu erabiltzaile eta pasahitz berdina hiru bertsioetan eta alderatu datu-basea edo zerbitzuko informazioa. Begiratu:
 
